@@ -450,3 +450,14 @@ carouselCards.forEach((card, index) => {
         }
     });
 }
+
+const warn = document.querySelector(".warn");
+if (warn) {
+  window.addEventListener("scroll", () => {
+    if (window.scrollY > 10) {
+      warn.style.display = "none";
+    } else {
+      warn.style.display = "";
+    }
+  });
+}
