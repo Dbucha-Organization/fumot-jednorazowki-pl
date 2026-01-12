@@ -130,7 +130,7 @@ body {
     background: rgba(10, 0, 21, 0.8);
     backdrop-filter: blur(10px);
     z-index: 1000;
-    padding: 0 0 1rem 0;
+    /* padding: 0 0 1rem 0; */
     border-bottom: 1px solid rgba(230, 0, 255, 0.1);
 }
 
@@ -950,7 +950,7 @@ footer svg {
     }
 
     .navbar {
-        padding: 0.75rem 0;
+        /* padding: 0.75rem 0; */
     }
 
     .nav-container {
@@ -975,6 +975,7 @@ footer svg {
 
     .nav-menu.active {
         left: 0;
+        display: flex;
     }
 
     .hamburger {
@@ -1914,7 +1915,9 @@ html, body {
     margin: 0;
     padding: 0;
 }
-
+.warn.active{
+    display: none;
+}
 /* Навигация */
 @media (max-width: 768px) {
     .nav-menu {
@@ -1922,7 +1925,8 @@ html, body {
     }
 
     .hamburger {
-        display: block; /* Показываем иконку бургера */
+        /* Показываем иконку бургера */
+        /* display: block;  */
         cursor: pointer;
     }
 
@@ -1932,7 +1936,8 @@ html, body {
     }
 
     .logo img {
-        height: 40px; /* Уменьшаем логотип */
+        width: 40px;
+      height: 40px; /* Уменьшаем логотип */
     }
 }
 
@@ -2008,30 +2013,6 @@ html, body {
 }
 
 /* Футер */
-@media (max-width: 768px) {
-    .foot-cont-one {
-        flex-direction: column; /* Ссылки друг под другом */
-        gap: 20px;
-    }
-
-    .cont-col {
-        align-items: center;
-        text-align: center;
-    }
-
-    .foot-cont-three {
-        display: grid;
-        grid-template-columns: 1fr 1fr; /* Города в две колонки */
-        font-size: 12px;
-        padding: 10px;
-    }
-
-    .social {
-        justify-content: center;
-        gap: 15px;
-        margin-bottom: 20px;
-    }
-}
 
 /* Общие правки для кнопок */
 @media (max-width: 320px) {
@@ -2053,6 +2034,7 @@ html, body {
     .carousel-wrapper {
         padding-left: 1rem;
         padding-right: 1rem;
+        top:55px;
     }
 
     /* Make carousel viewport allow visible overflow and reserve space for arrows */

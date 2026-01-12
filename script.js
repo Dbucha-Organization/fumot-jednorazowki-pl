@@ -23,6 +23,7 @@ noBtn.addEventListener("click", () => {
 
 
 // Mobile Menu Toggle
+const warmup = document.querySelector('.warn');
 const hamburger = document.querySelector('.hamburger');
 const navMenu = document.querySelector('.nav-menu');
 const navLinks = document.querySelectorAll('.nav-link');
@@ -31,6 +32,8 @@ const navLinks = document.querySelectorAll('.nav-link');
 hamburger.addEventListener('click', () => {
     hamburger.classList.toggle('active');
     navMenu.classList.toggle('active');
+    warmup.classList.toggle('active');
+
 });
 
 // Close mobile menu when a link is clicked
@@ -38,6 +41,7 @@ navLinks.forEach(link => {
     link.addEventListener('click', () => {
         hamburger.classList.remove('active');
         navMenu.classList.remove('active');
+        warmup.classList.remove('active');
     });
 });
 
@@ -46,6 +50,7 @@ document.addEventListener('click', (e) => {
     if (!hamburger.contains(e.target) && !navMenu.contains(e.target)) {
         hamburger.classList.remove('active');
         navMenu.classList.remove('active');
+         warmup.classList.remove('active');
     }
 });
 
